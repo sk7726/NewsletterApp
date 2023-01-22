@@ -40,7 +40,7 @@ app.post('/', (req, res) => {
 
     const request = https.request(url, options, (response) => {
         response.on("data", (data) =>{
-            // console.log(typeof(JSON.parse(data).errors));
+            console.log(JSON.parse(data));
         })
 
         if(response.statusCode === 200){
@@ -66,5 +66,3 @@ app.listen(process.env.PORT || 3000, () => {
     console.log("Server started on port 3000");
 })
 
-// d46662b98133e34e1c3dfef679e8a91d-us21   Api key
-// 56bfbfae02  id 
